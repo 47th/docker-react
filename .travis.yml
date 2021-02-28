@@ -11,5 +11,6 @@ deploy:
   provider: azure_web_apps
   site: "sksk571-docker-react"
   edge: true
+  verbose: true
   on:
     branch: master
