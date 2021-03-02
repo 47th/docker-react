@@ -8,9 +8,8 @@ script:
   - docker run -e CI=true sksk571/docker-react npm run test -- --coverage
 
 deploy:
-  provider: azure_web_apps
-  site: "sksk571-docker-react"
-  edge: true
-  verbose: true
+  provider: script
+  script:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push sksk571/docker-react
   on:
     branch: master
