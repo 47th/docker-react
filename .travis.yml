@@ -12,8 +12,5 @@ deploy:
   site: "sksk571-docker-react"
   edge: true
   verbose: true
-  username: $AZURE_WA_USERNAME
-  password:
-    secure: $AZURE_WA_PASSWORD
   on:
     branch: master
